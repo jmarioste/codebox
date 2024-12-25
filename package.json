@@ -1,6 +1,6 @@
 {
   "name": "@jmarioste/codebox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Code highlighting tool for Editor.js using prismjs and tailwindcss for styling",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
