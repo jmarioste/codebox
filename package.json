@@ -1,0 +1,26 @@
+{
+  "name": "@jmarioste/codebox",
+  "version": "1.0.0",
+  "description": "Code highlighting tool for Editor.js using prismjs and tailwindcss for styling",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests specified\" && exit 0",
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "editorjs",
+    "plugin",
+    "codebox",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@editorjs/editorjs": "^2.22.0",
+    "prismjs": "^1.25.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0"
+  }
+}
