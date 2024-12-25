@@ -1,6 +1,5 @@
-# Editor.js Plugin Library
+# Editor.js Codebox
 
-This project is an Editor.js plugin library that provides a customizable code editor block, allowing users to write and manage code snippets within their Editor.js content.
 
 ## Features
 
