@@ -1,47 +1,12 @@
-"use strict";
 "use client";
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// src/index.ts
-var index_exports = {};
-__export(index_exports, {
-  CodeBox: () => CodeBox
-});
-module.exports = __toCommonJS(index_exports);
 
 // src/Codebox.tsx
-var import_prismjs = __toESM(require("prismjs"));
-var import_prism_tomorrow = require("prismjs/themes/prism-tomorrow.css");
-var import_prism_typescript = require("prismjs/components/prism-typescript");
-var import_prism_javascript = require("prismjs/components/prism-javascript");
-var import_prism_jsx = require("prismjs/components/prism-jsx");
-var import_prism_tsx = require("prismjs/components/prism-tsx");
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-tsx";
 var COMMON_LANGUAGES = {
   javascript: "JavaScript",
   typescript: "TypeScript",
@@ -199,9 +164,9 @@ var CodeBox = class {
   }
   updateHighlighting() {
     const code = this.codeArea.textContent || "";
-    const grammar = import_prismjs.default.languages[this.data.language];
+    const grammar = Prism.languages[this.data.language];
     if (grammar) {
-      const highlighted = import_prismjs.default.highlight(code, grammar, this.data.language);
+      const highlighted = Prism.highlight(code, grammar, this.data.language);
       this.codeArea.innerHTML = highlighted;
     } else {
       this.codeArea.textContent = code;
@@ -224,7 +189,6 @@ var CodeBox = class {
     };
   }
 };
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
+export {
   CodeBox
-});
+};

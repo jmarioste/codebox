@@ -8,6 +8,8 @@
     "skipLibCheck": true,
     "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "jsx": "react"
