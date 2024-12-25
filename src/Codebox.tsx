@@ -148,7 +148,7 @@ export default class CodeBox implements BlockTool {
 
     this.codeArea.addEventListener("input", this.onInput.bind(this));
     this.codeArea.addEventListener("keydown", this.onKeyDown.bind(this));
-    this.wrapper.addEventListener("paste", this.onPaste.bind(this));
+    this.wrapper.addEventListener("paste", this._onPaste.bind(this));
 
     this.wrapper.appendChild(toolbar);
     this.wrapper.appendChild(this.codeArea);
@@ -174,7 +174,8 @@ export default class CodeBox implements BlockTool {
     }
   }
 
-  private onPaste(e: ClipboardEvent) {
+  // @ts-nocheck
+  private _onPaste(e: ClipboardEvent) {
     e.preventDefault();
     e.stopPropagation();
 
