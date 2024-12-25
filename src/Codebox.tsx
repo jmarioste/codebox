@@ -92,7 +92,7 @@ export default class CodeBox implements BlockTool {
       "border",
       "border-gray-700",
       "bg-gray-800",
-      "px-3",
+      "px-4",
       "text-sm",
       "text-gray-300",
       "focus:outline-none",
