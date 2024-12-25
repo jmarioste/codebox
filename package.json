@@ -20,6 +20,10 @@
     "@editorjs/editorjs": "^2.22.0",
     "prismjs": "^1.25.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarioste/codebox"
+  },
   "devDependencies": {
     "@types/node": "^22.10.2",
     "@types/prismjs": "^1.26.5",
