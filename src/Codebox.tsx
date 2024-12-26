@@ -1,6 +1,6 @@
 "use client";
 
-import { API, BlockAPI, BlockTool, PasteEvent } from "@editorjs/editorjs";
+import { API, BlockAPI, BlockTool } from "@editorjs/editorjs";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-typescript";
